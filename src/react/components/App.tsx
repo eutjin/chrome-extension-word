@@ -1,19 +1,29 @@
-const dogSrc: string = 'https://media.tenor.com/fej4_qoxdHYAAAAM/cute-puppy.gif';
+import { useEffect, useState } from "react";
+const { v4: uuidv4 } = require("uuid");
+import useStore from "./store";
 
-const generateDogGif = async () => {
-  // Get the active tab
-  const tabs = await chrome.tabs.query({active: true, currentWindow: true});
-  const activeTab = tabs[0];
-  // Send the dog Gif
-  chrome.tabs.sendMessage(activeTab.id || 0, dogSrc);
-};
+import styles from "./App.module.css";
+import Detail from "./Detail";
+import Home from "./Home";
+import Group from "./Group";
+import Label from "./Label";
+import DetailText from "./DetailText";
+import { Toaster } from "react-hot-toast";
+import CollectionView from "./CollectionView";
 
 const App = () => {
+  const { page, setPage, resetPage } = useStore();
+
   return (
-    <main>
-      <h1>Add a Dog Gif to Webpage</h1>
-      <img src={dogSrc} />
-      <button onClick={generateDogGif}>Generate Dog Gif</button>
+    <main className={styles.main}>
+      {page == "home" && <Home />}
+      {page == "detail"  && <Detail />}
+      {page == "edit"  && <Detail />}
+      {page == "group" && <Group />}
+      {page == "collectionView" && <CollectionView />}
+      {page == "label" && <Label />}
+      {page == "detailText" && <DetailText/>}
+      <Toaster position="bottom-center"/>
     </main>
   );
 };

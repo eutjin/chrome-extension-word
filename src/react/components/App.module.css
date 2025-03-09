@@ -1,0 +1,795 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* reuseable variables */
+    --border-line-color-1: rgb(224, 224, 224);
+    --button-main-color-1: rgb(78, 207, 158);
+    --button-main-color-2:rgb(33, 184, 133);
+    --button-secondary-color-1:rgb(218, 218, 218);
+    --box-shadow-1:rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    --gray-01:rgb(224, 224, 224);
+
+    --radius-01: 0.5rem;
+}
+  /* reset.css */
+
+/* Apply a basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Add other reset styles as needed */
+  
+  
+  /* a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+  }
+  a:hover {
+    color: #535bf2;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    a:hover {
+      color: #747bff;
+    }
+    button {
+      background-color: #f9f9f9;
+    }
+  } */
+  
+  ::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0; /* Set the color of the scrollbar thumb */
+    border-radius: 15px; /* Set the border radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Set the color of the scrollbar track */
+    border-radius: 15px; /* Set the border radius of the scrollbar track */
+}
+
+.btnBasic01{
+  border: 1px solid var(--gray-01);
+  padding: 0.2rem 0.6rem;
+  background-color: transparent;
+  display: flex;
+  gap: 0.3rem;
+  border-radius: var(--radius-01);
+  align-items: center;
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+
+.header1 {
+    color: red;
+    padding: 1rem;
+}
+
+.header1::after {
+    content: "";
+    display: block;
+    height: 1px; /* Adjust the height of the line as needed */
+    background-color: #000; /* Adjust the background color of the line */
+    margin-top: 8px; /* Adjust the margin space between the div and the line */
+  }
+
+.main {
+
+    width: 400px;
+    height: 500px;
+    background-color: white;
+  color: #242424;
+}
+
+.saveComponent{
+  width: 100%;
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* text */
+.textInputMain{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textInputMainModal{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.saveTitle{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+label{
+  font-weight: 700;
+}
+
+/* .saveTitle:focus{
+  border: 1px solid #547af8;
+} */
+
+input:focus {
+  border: 1px solid #646464; 
+  outline: none;
+}
+
+textarea:focus {
+  border: 1px solid #646464; 
+  outline: none;
+}
+
+.saveDesc{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.saveBtn{
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  background-color: rgb(33, 184, 133);
+color: white;
+}
+
+.textOptionMain{
+  display: flex;
+  gap: 1rem;
+}
+
+/* HOME */
+.homeTop{
+ background-color: red;
+ /* height: 9rem; */
+ display: flex;
+ flex-direction: column;
+}
+
+.homeTopNav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(224, 224, 224);
+
+  text-align: center;
+  font-weight: 600;
+  height: 50px;
+  align-items: center;
+}
+
+/* .homeTopNav{
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(224, 224, 224);
+
+  text-align: center;
+  font-weight: 600;
+  height: 50px;
+} */
+
+.homeTopNavLeft{
+display: flex;
+gap: 1rem;
+
+
+}
+
+.homeTopNavRight{
+
+  display: flex;
+
+}
+
+.homeTopMain{
+  background-color: white;
+  height: 100%;
+  flex: 1;
+  padding: 0.8rem;
+  display: flex;
+  gap:0.8rem;
+}
+
+.homeTopMainOpt{
+  background-color: rgb(255, 255, 255);
+  /* flex:1; */
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  box-shadow: var(--box-shadow-1);
+  font-size: 0.8rem;
+}
+
+.homeMain{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.homeContent{
+  background-color: rgb(251, 251, 251);
+
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  padding-top: 0.5rem ;
+}
+
+.homeContentMain{
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 0.7rem;
+
+}
+
+.homeTextCard {
+  background-color: #ffffff;
+  padding: 0.3rem 1rem;
+  box-shadow: var(--box-shadow-1);
+  border-radius: 0.25rem;}
+
+.homeContentTop{
+  /* background-color: bisque; */
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.homeContentTopSelector{
+  display: inline-block;
+  background-color: aqua;
+  padding: 0.5rem 2rem;
+}
+
+.viewTypeGroup{
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* menu */
+.menu {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  z-index: 100;
+  list-style: none;
+  user-select: none;
+  padding: 6px;
+  font-family: sans-serif;
+  font-size: 0.925rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: #fff;
+  /* min-width: 10rem; */
+  width: 150px;
+
+  /* scroll and fixed height */
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.menuOpening {
+  composes: menu;
+  animation: menuShow 0.15s ease-out;
+}
+
+.menuClosing {
+  composes: menu;
+  animation: menuHide 0.1s ease-out forwards;
+}
+
+.menuItem {
+  cursor: pointer;
+  border-radius: 6px;
+  /* padding: 0.375rem 4rem; */
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.15rem 1rem;
+  font-size: 0.8rem;
+}
+
+.menuItemHover {
+  composes: menuItem;
+  color: #000000;
+  background-color: #f8f8f8;
+}
+
+.menuItemDisabled {
+  composes: menuItem;
+  cursor: default;
+  color: #aaa;
+}
+
+.menu:focus,
+.menuItem:focus {
+  outline: none;
+}
+
+.submenuItem {
+  position: relative;
+}
+
+.submenuItem::after {
+  /* content: url("chevron-right-solid.svg"); */
+  position: absolute;
+  width: 7px;
+  right: 0.625rem;
+}
+
+.menuDivider {
+  height: 1px;
+  margin: 0.5rem 0.625rem;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.menuHeader {
+  cursor: pointer;
+  border-radius: 6px;
+  /* padding: 0.375rem 4rem; */
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.15rem 1rem;
+  font-size: 0.8rem;
+}
+
+/* .szh-menu__divider	{
+  color: red;
+} */
+
+.menuButton{
+  background-color: rgb(78, 207, 158);
+  /* border: 1px solid rgb(223, 225, 228);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 1px; */
+  margin-right: 0.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  
+}
+
+.menuButtonText{
+  flex: 1;
+  background-color: white;
+  border: 1px solid rgb(223, 225, 228);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 1px 1px;
+  padding: 0.7rem;
+}
+
+.groupTopNav{
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid var(--border-line-color-1);
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  height: 50px;
+}
+.groupContent{
+  flex:1;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  overflow-y: auto;
+}
+
+.groupDefault{
+  background-color: #ffffff;
+  /* aspect-ratio: 1 /1; */
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: var(--box-shadow-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 7rem;
+}
+
+.groupDefault span:first-child{
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.groupMain{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main1{
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.collectionViewMain{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* LABEL */
+.labelColorComponent{
+ width: 60px;
+  height: 7rem;
+}
+
+.react-colorful{
+  width: 60px;
+}
+
+/* common */
+.hexColorInput{
+  width: 100%;
+  margin-top: 1rem;
+
+  padding: 12px 20px;
+
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formTextRequired{
+  color: red;
+  font-weight: 600;
+}
+
+.formBorderRequired{
+ border: 2px solid red;
+}
+
+.navButton{
+  
+  border-radius: 1rem;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+}
+
+.customModalContainer{
+  width: 400px;
+
+}
+
+.customOverlay{
+  background-color: rgb(37, 34, 172);
+
+}
+
+.customModal{
+  background-color: red;
+  width: 90%;
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+
+/* detail page */
+.detail{
+flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.displayBtnGroup{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.displayBtnGroupModal{
+  margin-top:1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+/* basic */
+.header{
+  padding: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid var(--border-line-color-1);
+}
+
+.header_detail{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.button_basic{
+    border-radius: 1rem;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+}
+
+.button_basic_s{
+  border-radius: 0.5rem;
+  border: none;
+  height: 1.2rem;
+  width: 1.7rem;
+
+}
+
+.label_basic_s{
+  border-radius: 0.2rem;
+  border: none;
+  height: 1rem;
+  /* width: 1.7rem; */
+  background-color: #646464;
+  color: white;
+  padding: 0 0.5rem;
+ display: flex;
+ align-items: center;
+font-size: 0.7rem;
+}
+
+.content{
+  background-color: rgb(245, 245, 245);
+  flex: 1;
+  padding: 1rem;
+
+}
+
+.detailText_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.detailText_section{
+/* background-color: blue; */
+display: flex;
+justify-content: center;
+}
+
+/* .textCard{
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 70%;
+} */
+
+.textCard{
+  background-color: rgb(255, 255, 255);
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  width: 70%;
+
+ 
+}
+
+.textCard_divider{
+  border: 1px solid var(--border-line-color-1);
+  margin: 1rem 0;
+}
+
+.detailText_footer{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.textCard_option{
+  display: flex;
+  justify-content: end;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.textCard_text_title{
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.textCard_label_section{
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+/* collection */
+
+.collectionViewList{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.textCardList {
+  background-color: #ffffff;
+  padding: 0.5rem;
+border: 1px solid var(--gray-01);
+  border-radius: 0.45rem;}
+
+
+
+
+
+  .textCardTop{
+    display: flex;
+    justify-content: space-between;
+    /* margin-bottom: 0.2rem; */
+  }
+  .textCardBottom{
+    margin-bottom: 0.3rem;
+  }
+
+  .textCardTitle{
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .textCardLabel{
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  /* .textCardHoverOptContainer{
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.9rem;
+
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 1s ease, transform 1s ease;
+  pointer-events: none;
+  } */
+
+  .textCardHoverOptContainer {
+    opacity: 0;
+
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    pointer-events: none; /* Prevent accidental clicks when hidden */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .textCardHoverOptContainer.show {
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+  .textCardList:hover .textCardHoverOptContainer{
+
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+
+  }
+
+  .addTodoButton {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .addTodoButton:hover {
+    background-color: #0056b3;
+    /* transform: scale(1.02); */
+  }

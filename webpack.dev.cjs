@@ -3,7 +3,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
+  devtool: 'inline-source-map',
   target: 'web',
   entry: {
     contentScript: './src/content/index.ts',
